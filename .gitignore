@@ -1,3 +1,13 @@
+# local directories to exclude
+resources
+wandb
+.DS_Store
+.idea
+pre_processing_tutorial/misc
+utils/__pycache__
+processed_dataset
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
