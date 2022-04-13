@@ -7,10 +7,14 @@ from datetime import datetime
 import os
 import note_seq
 
+import sys
+
+sys.path.insert(0, "../")
+
 from hvo_sequence.hvo_sequence.io_helpers import note_sequence_to_hvo_sequence
 from hvo_sequence.hvo_sequence.drum_mappings import ROLAND_REDUCED_MAPPING
 
-tf.enable_eager_execution()
+tf.compat.v1.enable_eager_execution()
 
 # For some reason, tfds import gives an error on the first attempt but works second time around
 try:
@@ -345,4 +349,3 @@ store_dataset_as_pickle(
     append_datetime=True,
     features_with_separate_picklefile=["hvo_sequence", "midi", "note_sequence"],
 )
-
